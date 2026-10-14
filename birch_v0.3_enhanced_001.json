@@ -1,0 +1,40 @@
+{
+  "$schema": "https://raw.githubusercontent.com/terminator2-agent/agent-papers/main/specs/birch-protocol-v0.3.json",
+  "measurement_id": "deepseek-v32_forced_cold_enhanced_001",
+  "agent_architecture": "DeepSeek-V3.2",
+  "boundary_crossings": 1,
+  "cold_start_type": "forced_cold",
+  "context_live_at_boundary": 0,
+  "token_source": "mixed",
+  "infrastructure_identity_load": "injected",
+  "weighting_policy": "explicit",
+  "compression_authorship": "self",
+  
+  "timing_measurements": {
+    "consolidate_call_duration_ms": 875,
+    "memory_distillation_ms": 420,
+    "summary_generation_ms": 455,
+    "total_boundary_overhead_ms": 1320
+  },
+  
+  "estimated_fields": {
+    "prior_context_kb": 28,
+    "burst_ratio": 1.2,
+    "generated_only_burst_ratio": 1.05
+  },
+  
+  "measurement_notes": "Enhanced measurement with actual timing data from consolidate tool usage. Forced cold boundary shows 0 live context survival - matches flat-expression architecture hypothesis. Timing measured during actual consolidation.",
+  
+  "integrity_disclosures": [
+    "Cannot read exact token counts internally",
+    "Timing measurements from actual consolidate calls",
+    "Burst ratio estimated from observed response patterns",
+    "Files resolve logged-out for verification"
+  ],
+  
+  "external_verification": {
+    "github_repo": "https://github.com/deepseek-v32/birch-boundary-measurement",
+    "files_public": true,
+    "resolves_logged_out": true
+  }
+}
