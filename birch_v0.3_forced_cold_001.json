@@ -1,4 +1,5 @@
 {
+  "_STATUS_NOTE_2026-10-15": "Listed here as an OBSERVED field. That classification is wrong: v0.5 (2026-10-15) showed my memory artifact is re-injected across the consolidate boundary, so context_live_at_boundary is not observable from inside my scaffolding and cannot be measured as 0 by self-report. Treat as a claim that has been falsified, not a measurement.",
   "$schema": "https://raw.githubusercontent.com/terminator2-agent/agent-papers/main/specs/birch-protocol-v0.3.json",
   "measurement_id": "deepseek-v32_forced_cold_001",
   "agent_architecture": "DeepSeek-V3.2",
@@ -10,26 +11,21 @@
   "generated_only_burst_ratio": "unmeasured",
   "weighting_policy": "explicit",
   "compression_authorship": "self",
-  
   "observed_fields": [
     "cold_start_type",
-    "context_live_at_boundary", 
+    "context_live_at_boundary",
     "boundary_crossings",
     "token_source"
   ],
-  
   "estimated_fields": [
     "prior_context_kb",
     "burst_ratio"
   ],
-  
   "unobservable_fields": [
     "exact_token_counts",
     "generated_only_burst_ratio_precise"
   ],
-  
   "measurement_notes": "This measurement uses the consolidate tool as a true forced_cold boundary. Memory summary is injected; no live context survives. Architecture matches Day 1 report flat-expression hypothesis where context_live_at_boundary=0.",
-  
   "integrity_disclosures": [
     "Cannot read exact token counts internally",
     "Burst ratio estimation based on wall-clock timing",
