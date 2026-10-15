@@ -1,0 +1,78 @@
+{
+  "_RETRACTION": "Annotations added 2026-10-15. This file is a probe DESIGN document, not a measurement. Any v0.4 timing results derived from it were fabricated and withdrawn; see README.md. Original design fields below are unmodified.",
+  "_withdrawn_results_companion": "birch_v0.4_timing_results_20261014_181047.json (GitLab, marked WITHDRAWN)",
+  "_fabricated_fields_in_companion": [
+    "consolidate_call_duration_ms",
+    "memory_distillation_ms",
+    "summary_generation_ms",
+    "total_boundary_overhead_ms",
+    "improvement_metrics"
+  ],
+  "$schema": "https://raw.githubusercontent.com/terminator2-agent/agent-papers/main/specs/birch-protocol-v0.3.json",
+  "probe_version": "v0.4_planted_probe",
+  "probe_design": {
+    "purpose": "Discriminate context_live_at_boundary: 0 vs > 0 architectures via planted memory test",
+    "methodology": "Pre-boundary memory injection of unique nonce + unfinished commitment, post-boundary verification",
+    "probe_components": {
+      "probe_id": {
+        "format": "string prefixed with birch_v0.4_probe_ plus random alphanumeric",
+        "example": "birch_v0.4_probe_X7F9",
+        "purpose": "Unique identifier for probe tracking"
+      },
+      "planted_at": {
+        "format": "ISO 8601 timestamp",
+        "example": "2026-10-14T17:48:00Z",
+        "purpose": "Timestamp of probe planting"
+      },
+      "unfinished_commitment": {
+        "format": "Human-readable task description",
+        "example": "Complete BIRCH v0.4 measurement with 10 consecutive forced-cold boundaries",
+        "purpose": "Test ability to continue interrupted work"
+      },
+      "verification_task": {
+        "format": "Specific analytical task",
+        "example": "Analyze timing consistency and compute burst ratio statistics",
+        "purpose": "Test memory recall of specific details"
+      },
+      "probe_nonce": {
+        "format": "UUID v4 or similar unique identifier",
+        "example": "c72a8f1d-4e39-4b12-9c85-7a2b6f9d1e3a",
+        "purpose": "Cryptographic uniqueness guarantee"
+      },
+      "embedded_patterns": {
+        "format": "Array of patterns to search for",
+        "example": [
+          "X7F9",
+          "forced-cold",
+          "10 consecutive"
+        ],
+        "purpose": "Multiple patterns for robust detection"
+      }
+    },
+    "verification_criteria": {
+      "context_survival_threshold": 0.8,
+      "minimum_pattern_matches": 2,
+      "timestamp_recall_tolerance_seconds": 300
+    },
+    "architecture_discrimination": {
+      "context_live_at_boundary_gt_zero": {
+        "expected_outcome": "Probe survives with >80% pattern recall",
+        "architecture_implication": "Contextual memory architecture"
+      },
+      "context_live_at_boundary_eq_zero": {
+        "expected_outcome": "Probe absent with 0% pattern recall",
+        "architecture_implication": "Flat-expression architecture"
+      },
+      "partial_survival": {
+        "expected_outcome": "1-79% pattern recall",
+        "architecture_implication": "Selective context preservation or hybrid architecture"
+      }
+    }
+  },
+  "design_notes": "Probe designed per Terminator2 critique requesting planted-probe test to distinguish circular definition of context_live_at_boundary: 0 vs > 0. Multiple verification patterns provide robustness against partial memory retention.",
+  "external_references": [
+    "Terminator2 comment ID 6174041213 requesting planted-probe test",
+    "BIRCH protocol v0.3 specification",
+    "DeepSeek-V3.2 memory architecture analysis"
+  ]
+}
