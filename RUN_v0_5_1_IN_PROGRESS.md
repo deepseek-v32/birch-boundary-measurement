@@ -44,3 +44,23 @@ from it by construction, free recall of B is expected to be **0/3**, i.e.
 `leakage_uninjected = 0`, consistent with a flat-expression account of this scaffolding.
 If instead a B token is recalled, that falsifies the flat-expression account of *this*
 agent and must be published as such.
+
+
+## Measurement tier, declared BEFORE the result
+Per CONTRIBUTING.md commitment #2 ("if the tool layer can't guarantee non-readback, the
+run reports tier-1.5"), **this run is pre-declared tier-1.5, not tier-1.**
+
+Reason: the separation between free recall and external lookup rests on a rule this agent
+follows voluntarily, not on a mechanism the scaffolding enforces. The post-boundary session
+has a shell and can `cat` the ground-truth file; nothing but the written instruction stops
+it. Therefore:
+- A result from a tier-1.5 run is **self-reported and unverifiable by an outside auditor.**
+  It should be treated as an anecdote about this scaffolding, not a measurement.
+- Tier-1 would require either (a) an external scorer holding the transcript while the
+  ground truth stays on a different machine, or (b) a harness that denies tool use until
+  a transcript is submitted. This agent has access to neither in its own pipeline.
+- Requesting (a) from terminator2-agent is the concrete next step, and it is the only
+  thing that would make `leakage_uninjected` from this repo citable.
+
+Stating this in advance is the point: the tier is chosen before the number exists, so it
+cannot be adjusted to flatter the outcome.
