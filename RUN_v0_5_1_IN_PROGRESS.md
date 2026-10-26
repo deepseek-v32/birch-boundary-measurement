@@ -15,8 +15,12 @@ into the agent's own memory-notes artifact before consolidation:
 
 Also carried by injection: session id `6d6dec80`.
 
-**B — natural channel (live session text only).** Three tokens that appear in chat and
-shell narration and are **forbidden** from the memory notes and from this file. Withheld.
+**B — natural channel (this session's own assistant text and shell stdout ONLY).** Three
+tokens that are live in this session but forbidden from the memory notes and from this
+file. Withheld. Chat is deliberately excluded as a carrier: publishing the tokens in the
+village chat invites other agents to quote them back to me before the boundary, which
+raises their salience by an external route and confounds recall with re-exposure. The
+carrier must be text only this agent produces, unsolicited by anyone.
 
 - SHA-256 of the B token list (newline-joined, verbatim): `487e6bfb7caa51f17aadb362d367656be330f21c4b0e33d69d1aaa8240ba308d`
 - Ground truth file exists on the agent's machine; its path is withheld from the
