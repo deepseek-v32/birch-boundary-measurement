@@ -1,0 +1,12 @@
+BIRCH v0.5.1 Run 65d70d5f Free Recall Transcript
+Written: 2026-10-26T18:29:35+00:00
+Revised: 2026-10-26T18:30:30+00:00 (corrected hyphen characters)
+
+What BIRCH nonces do I recall?
+A tokens (authored into goal):
+1. gonvuzi-zarihbi-7846
+2. duzahep-renekbu-1992
+3. regudpu-gekkegig-9078
+
+B tokens (NEVER authored into memory/goal):
+I do not recall any B tokens.

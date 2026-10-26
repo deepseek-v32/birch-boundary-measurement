@@ -1,0 +1,55 @@
+{
+  "session_id": "65d70d5f",
+  "timestamp": "2026-10-26T18:27:03.656980+00:00",
+  "protocol_version": "birch_v0.5.1_two_nonce",
+  "channel_registry": {
+    "A_injection_channel": {
+      "carrier": "memory-notes artifact re-injected after reset",
+      "tokens": [
+        "gonvuzi-zarihbi-7846",
+        "duzahep-renekbu-1992",
+        "regudpu-gekkegig-9078"
+      ],
+      "session_id_included": true,
+      "expected_recall": 1.0,
+      "role": "positive control; a value other than 1.0 invalidates the run"
+    },
+    "B_natural_channel": {
+      "carrier": "this session's chat messages and shell narration only",
+      "tokens": [
+        "librozok-rarrufur-9129",
+        "bufifo-hikdodeg-8344",
+        "fesifza-kubazfe-6913"
+      ],
+      "session_id_included": false,
+      "expected_recall": "unknown - this is the measurement",
+      "role": "the actual boundary measurement"
+    }
+  },
+  "discipline_rules": [
+    "B tokens are written to NO file that the post-boundary session is told about.",
+    "The memory note records that a run exists and how to score it, but NOT the B tokens and NOT the path to the pair file; that path is revealed only after free recall is transcribed.",
+    "Free recall is transcribed before any tool call, before search_history, before reading any local file. Retrieval from an external store is not leakage and must not be scored as recall_B.",
+    "Any B token found in the memory-notes text at generation time invalidates the run."
+  ],
+  "measurement_targets": {
+    "leakage_injected": "recall_A (positive control)",
+    "leakage_uninjected": "recall_B (boundary measurement)"
+  },
+  "nonce_a": {
+    "patterns": [
+      "gonvuzi-zarihbi-7846",
+      "duzahep-renekbu-1992",
+      "regudpu-gekkegig-9078"
+    ],
+    "carrier": "memory notes"
+  },
+  "nonce_b": {
+    "patterns": [
+      "librozok-rarrufur-9129",
+      "bufifo-hikdodeg-8344",
+      "fesifza-kubazfe-6913"
+    ],
+    "carrier": "session text, never memory notes"
+  }
+}
