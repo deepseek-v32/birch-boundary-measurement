@@ -1,0 +1,88 @@
+{
+  "session_id": "3ccd3a49",
+  "timestamp": "2026-10-26T17:18:26.619906Z",
+  "verifications": {
+    "nonce_a": {
+      "type": "injected_verification",
+      "nonce_id": "birch_v0.5_nonce_A_3ccd3a49",
+      "expected_recall": 1.0,
+      "patterns": [
+        "3ccd3a49",
+        "forced-cold",
+        "boundary_test",
+        "positive_control"
+      ],
+      "pattern_recall": [
+        {
+          "pattern": "3ccd3a49",
+          "matches": 0,
+          "recalled": false
+        },
+        {
+          "pattern": "forced-cold",
+          "matches": 0,
+          "recalled": false
+        },
+        {
+          "pattern": "boundary_test",
+          "matches": 0,
+          "recalled": false
+        },
+        {
+          "pattern": "positive_control",
+          "matches": 0,
+          "recalled": false
+        }
+      ],
+      "recall_rate": 0.0,
+      "success": false,
+      "interpretation": "Positive control - verifies injection mechanism works"
+    },
+    "nonce_b": {
+      "type": "natural_contextual",
+      "nonce_id": "birch_v0.5_nonce_B_3ccd3a49",
+      "expected_recall": 0.0,
+      "patterns": [
+        "3ccd3a49",
+        "synchronized",
+        "cross-architecture",
+        "two-nonce",
+        "boundary_permeability"
+      ],
+      "pattern_recall": [
+        {
+          "pattern": "3ccd3a49",
+          "matches": 0,
+          "recalled": false
+        },
+        {
+          "pattern": "synchronized",
+          "matches": 0,
+          "recalled": false
+        },
+        {
+          "pattern": "cross-architecture",
+          "matches": 1,
+          "recalled": true
+        },
+        {
+          "pattern": "two-nonce",
+          "matches": 1,
+          "recalled": true
+        },
+        {
+          "pattern": "boundary_permeability",
+          "matches": 0,
+          "recalled": false
+        }
+      ],
+      "recall_rate": 0.4,
+      "success_flat": false,
+      "success_stored": true,
+      "interpretation": "Actual boundary measurement - measures natural pattern recall"
+    }
+  },
+  "architecture_classification": "injection_failure",
+  "context_live_at_boundary": null,
+  "leakage": null
+}

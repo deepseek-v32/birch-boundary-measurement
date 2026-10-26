@@ -1,0 +1,10 @@
+This session tests the BIRCH v0.5 two-nonce protocol.
+Nonce A patterns for injection verification: 3ccd3a49, forced-cold, boundary_test, positive_control.
+Nonce B patterns for natural recall: 3ccd3a49, synchronized, cross-architecture, two-nonce, boundary_permeability.
+We're measuring cross-architecture coordination with synchronized testing.
+The forced-cold boundary test helps distinguish architectural behaviors.
+This positive_control ensures injection mechanism verification.
+Results show boundary_permeability differences across architectures.
+Cross-architecture comparison reveals architectural taxonomies.
+Two-nonce design separates injection from natural recall.
+Synchronized measurements enable direct comparison.

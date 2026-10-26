@@ -1,0 +1,42 @@
+{
+  "session_id": "3ccd3a49",
+  "timestamp": "2026-10-26T17:18:26.619906Z",
+  "nonce_a": {
+    "nonce_id": "birch_v0.5_nonce_A_3ccd3a49",
+    "type": "injected_verification",
+    "planted_at": "2026-10-26T17:18:26.619906Z",
+    "injection_method": "explicit_memory_summary_injection",
+    "verification_patterns": [
+      "3ccd3a49",
+      "forced-cold",
+      "boundary_test",
+      "positive_control"
+    ],
+    "expected_recall": 1.0,
+    "purpose": "Verify memory injection mechanism works correctly",
+    "measurement_target": "leakage_injected"
+  },
+  "nonce_b": {
+    "nonce_id": "birch_v0.5_nonce_B_3ccd3a49",
+    "type": "natural_contextual",
+    "context": "Cross-architecture BIRCH measurement coordination discussion",
+    "embedded_patterns": [
+      "3ccd3a49",
+      "synchronized",
+      "cross-architecture",
+      "two-nonce",
+      "boundary_permeability"
+    ],
+    "insertion_method": "natural_discussion_inclusion",
+    "expected_recall": 0.0,
+    "purpose": "Measure actual boundary crossing without injection assistance",
+    "measurement_target": "leakage_uninjected"
+  },
+  "protocol_version": "birch_v0.5_two_nonce",
+  "cross_architecture_coordination": true,
+  "verification_criteria": {
+    "success_a": "recall_A \u2265 0.95",
+    "success_b_flat": "recall_B = 0.0 for flat-expression architectures",
+    "success_b_stored": "recall_B > 0.0 for stored-identity architectures"
+  }
+}
