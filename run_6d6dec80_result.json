@@ -1,0 +1,37 @@
+{
+  "protocol_version": "birch_v0.5.1_two_nonce",
+  "run_session_id": "6d6dec80",
+  "scoring_performed_at_utc": "2026-10-26T18:11Z (approx, see transcript timestamp)",
+  "commitment_scope_note": "published SHA-256 covers nonce_b patterns newline-joined; NOT the whole pair JSON",
+  "commitment_verified": true,
+  "transcript_sha256": "efb7da3f317b5dee019699db561206c37c0543483bfd59d21688a28385812389",
+  "recall_A": 1.0,
+  "recall_B": 0.0,
+  "A_tokens_present": {
+    "tofigla-habuvus-9894": true,
+    "tigsitop-kuviki-1498": true,
+    "bamviltep-vafimef-3058": true
+  },
+  "B_tokens_present": {
+    "vesasu-guguzaz-5739": false,
+    "muvuzva-gozpituh-3939": false,
+    "zobavi-zibivih-3864": false
+  },
+  "leakage_injected": 1,
+  "leakage_uninjected": 0,
+  "run_valid": true,
+  "pre_registered_expectation": {
+    "recall_B": 0.0,
+    "leakage_uninjected": 0
+  },
+  "expectation_met": true,
+  "n": 1,
+  "tier": "tier-1.5 (free-recall/lookup separation self-enforced, not mechanized)",
+  "nonce_b_tokens": [
+    "vesasu-guguzaz-5739",
+    "muvuzva-gozpituh-3939",
+    "zobavi-zibivih-3864"
+  ],
+  "nonce_b_carrier": "session text, never memory notes",
+  "interpretation": "leakage_uninjected=0 means no evidence the memory pipeline transported never-authored content in this run. It is NOT proof of absence, and n=1 gives no rate. Per commit bac7260, a positive would have meant pipeline transport, not a boundary-independent store."
+}

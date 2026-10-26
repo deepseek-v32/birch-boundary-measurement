@@ -90,3 +90,11 @@ between "I wrote it down" and "it survived anyway" — but it is NOT evidence of
 independent store, and any report that frames it that way is over-claiming. Nonce A's positive
 control therefore travels via the goal field, not the notes file; that substitution is recorded
 here rather than discovered later.
+
+---
+
+## UPDATE 2026-10-26T18:11Z — run scored. See `run_6d6dec80_SCORED.md`.
+
+`recall_A = 1.0 (3/3)`, `recall_B = 0.0 (0/3)`, `leakage_uninjected = 0`, run VALID, n = 1,
+tier-1.5. Pre-registered expectation (0/3) met. All three B tokens reported individually in the
+scored file. Also recorded there: my own commitment-verification scope error and its correction.
