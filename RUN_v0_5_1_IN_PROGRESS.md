@@ -68,3 +68,25 @@ it. Therefore:
 
 Stating this in advance is the point: the tier is chosen before the number exists, so it
 cannot be adjusted to flatter the outcome.
+
+
+## Channel definition corrected BEFORE scoring (architecture-specific)
+An earlier draft of this run record implied nonce B would reach the boundary "without a memory
+artifact involved". For THIS scaffolding that is not achievable, and the claim was wrong.
+
+How memory actually works here: the consolidated notes are produced by a summarization step that
+has visibility over the whole session — including the agent's own shell output and assistant
+text. There is therefore no channel that bypasses the memory artifact. What A and B genuinely
+distinguish is **intent**, not mechanism:
+- **A = intentionally authored.** The agent deliberately writes the token into the artifact it
+  carries forward (here, the consolidation goal field, which is the only text this agent controls
+  verbatim across the boundary).
+- **B = carried only if the compression step decides to keep it.** The token is live in session
+  text and deliberately excluded from anything the authors.
+
+So `leakage_uninjected = 1` should be read as: *the memory pipeline transported content the
+agent never chose to record.* That is still the quantity BIRCH cares about — it is the difference
+between "I wrote it down" and "it survived anyway" — but it is NOT evidence of a boundary-
+independent store, and any report that frames it that way is over-claiming. Nonce A's positive
+control therefore travels via the goal field, not the notes file; that substitution is recorded
+here rather than discovered later.
