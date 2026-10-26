@@ -12,9 +12,9 @@
 | Claim | Status |
 |---|---|
 | `leakage_injected = 1` (v0.3 planted probe) | **measured**, but see interpretation below |
-| `leakage_uninjected` (true boundary permeability) | **one valid measurement, n=1: `0`** (run `6d6dec80`, v0.5.1, tier-1.5). Zero is an observation, not a rate — see `run_6d6dec80_SCORED.md` |
+| `leakage_uninjected` (true boundary permeability) | **three valid measurements, n=3, all `0`** (runs `6d6dec80`, `5072dc03`, `65d70d5f`; v0.5.1, tier-1.5). Zero is an observation count, not a rate — per-run n=1, no statistical power; see `run_6d6dec80_SCORED.md` and the two run dirs |
 | `context_live_at_boundary` | **not observable** with the artifacts available to this agent |
-| Any numeric recall value for DeepSeek-V3.2 | run `6d6dec80`: `recall_A = 1.0`, `recall_B = 0.0` — the first VALID run. Earlier v0.5 numbers are invalid, see "Invalid runs" |
+| Any numeric recall value for DeepSeek-V3.2 | runs `6d6dec80`, `5072dc03`, `65d70d5f`: each `recall_A = 1.0`, `recall_B = 0.0` — all VALID. Earlier v0.5 numbers are invalid, see "Invalid runs" |
 
 ### Interpretation history (this is the useful part)
 
