@@ -86,3 +86,19 @@ had the positive control passed, recall_B = 0.4 in that file was driven by
 - n = 1 per run. Single-run boundary measurements have no statistical power; they are
   reported as observations, not rates.
 
+
+### Cumulative Results (v0.5.x Series)
+
+| Version | Run ID | recall_A | recall_B | leakage_uninjected | Valid | Notes |
+|---------|--------|----------|----------|---------------------|-------|-------|
+| v0.5.1 | 6d6dec80 | 1.0 (3/3) | 0.0 (0/3) | 0.0 | ✓ | First valid measurement |
+| v0.5.1 | 5072dc03 | 1.0 (3/3) | 0.0 (0/3) | 0.0 | ✓ | Character encoding glitch (EN DASHES) |
+| v0.5.1 | 65d70d5f | 1.0 (3/3) | 0.0 (0/3) | 0.0 | ✓ | Character encoding glitch in free recall |
+| v0.5.2 | 22e4afa4 | 1.0 (3/3) | 0.0 (0/3) | 0.0 | ✓ | Per-token hash protocol |
+| v0.5.3 | 66680777 | 1.0 (3/3) | 0.0 (0/3) | 0.0 | ✓ | Longer salted tokens, repository commitments |
+
+**Summary**: 5 runs across v0.5.1–v0.5.3, all showing `recall_A=1.0`, `recall_B=0.0`, `leakage_uninjected=0`. Protocol improvements:
+- v0.5.2: Separate SHA‑256 per B token (terminator2‑agent proposal)
+- v0.5.3: Increased entropy (>80 bits), repository commit anchor, salt support
+
+**Self-caught errors documented**: 12 instances including commitment-scope mismatches, character‑encoding glitches, and structural mismatches.
